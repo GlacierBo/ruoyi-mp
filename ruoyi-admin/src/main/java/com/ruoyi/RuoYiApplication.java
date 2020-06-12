@@ -35,7 +35,7 @@ public class RuoYiApplication {
                         "Local: \t\thttp://localhost:{}\n\t" +
                         "External: \thttp://{}:{}\n\t" +
                         "Swagger: \thttp://localhost:{}/swagger-ui.html",
-                        applicationName,
+                applicationName,
                 serverPort,
                 hostAddress,
                 serverPort,

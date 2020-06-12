@@ -6,26 +6,28 @@
 	
     <groupId>com.ruoyi</groupId>
     <artifactId>ruoyi</artifactId>
-    <version>4.1.0</version>
+    <version>4.2.0</version>
+	<packaging>pom</packaging>
 
-    <name>ruoyi</name>
+	<name>ruoyi</name>
 	<url>http://www.ruoyi.vip</url>
     <description>若依管理系统</description>
     
     <properties>
-	    <ruoyi.version>4.1.0</ruoyi.version>
+	    <ruoyi.version>4.2.0</ruoyi.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<shiro.version>1.4.2</shiro.version>
 		<thymeleaf.extras.shiro.version>2.0.0</thymeleaf.extras.shiro.version>
 		<mybatis.boot.version>1.3.2</mybatis.boot.version>
+		<mybatis.plus.version>3.2.0</mybatis.plus.version>
 		<druid.version>1.1.14</druid.version>
 		<bitwalker.version>1.19</bitwalker.version>
 		<kaptcha.version>2.3.2</kaptcha.version>
 		<swagger.version>2.9.2</swagger.version>
 		<pagehelper.boot.version>1.2.5</pagehelper.boot.version>
-		<fastjson.version>1.2.60</fastjson.version>
+		<fastjson.version>1.2.70</fastjson.version>
 		<oshi.version>3.9.1</oshi.version>
 		<commons.io.version>2.5</commons.io.version>
 		<commons.fileupload.version>1.3.3</commons.fileupload.version>
@@ -36,7 +38,6 @@
     <!-- 依赖声明 -->
     <dependencyManagement>
         <dependencies>
-        
             <!-- SpringBoot的依赖配置-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -203,6 +204,7 @@
 	            <version>${ruoyi.version}</version>
 	        </dependency>
 
+			<!-- 业务代码-->
 			<dependency>
 				<groupId>com.ruoyi</groupId>
 				<artifactId>ruoyi-project</artifactId>
@@ -211,6 +213,21 @@
 	        
         </dependencies>
     </dependencyManagement>
+	<!-- 添加依赖 -->
+	<dependencies>
+		<!-- lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+
+		<!-- mapper-plus begin -->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>${mybatis.plus.version}</version>
+		</dependency>
+	</dependencies>
 
     <modules>
 	    <module>ruoyi-admin</module>
@@ -221,53 +238,6 @@
         <module>ruoyi-common</module>
         <module>ruoyi-project</module>
     </modules>
-    <packaging>pom</packaging>
-
-
-	<dependencies>
-		<!--Spring框架基本的核心工具-->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context-support</artifactId>
-		</dependency>
-
-		<!-- mapper-plus begin -->
-		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>mybatis-plus-boot-starter</artifactId>
-			<version>3.2.0</version>
-		</dependency>
-		<!-- JavaBean映射工具库 -->
-		<dependency>
-			<groupId>net.sf.dozer</groupId>
-			<artifactId>dozer</artifactId>
-			<version>5.4.0</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>slf4j-log4j12</artifactId>
-					<groupId>org.slf4j</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>20.0</version>
-		</dependency>
-
-		<!-- lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-		</dependency>
-
-		<!-- 用Jpa 生成一下数据库表 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-
-	</dependencies>
 
 	<build>
         <plugins>
