@@ -8,8 +8,15 @@
 
 因为之前在工作中有研究过若依的源码，加之自己接一些小活儿需要一个顺手的脚手架，于是就有了这个项目。
 
-其实有更方便的方案，就是用 [jhipster](https://www.jhipster.tech/) 去生成一个 JPA 框架，但是由于本人学艺不精😭，就先按下不表。
+其实有更方便的方案，就是用 [jhipster](https://www.jhipster.tech/) 去生成一个 JPA 框架省去写 SQL 的烦恼，加上 JDL 可以很方便生成 CRUD。但是由于本人学艺不精😭，就先按下不表。
 
+ruoyi-admin 后台模块（管理员后台）
+ruoyi-common 通用模块（工具类等）
+ruoyi-framework 框架
+ruoyi-generator 代码生成器
+ruoyi-project 业务模块（自己的业务）
+ruoyi-quartz 定时任务
+ruoyi-system 系统
 
 ## 若依内置功能
 1.  用户管理：用户是系统操作者，该功能主要完成系统用户配置。
