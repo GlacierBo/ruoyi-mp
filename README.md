@@ -1,6 +1,7 @@
-[RuoYi](https://gitee.com/y_project/RuoYi) 是非常不错的一个开源框架，源码通俗易懂很容易上手。因为之前在工作中有研究过若依的源码，加之自己接一些小活儿需要一个顺手的脚手架，于是就有了这个项目。
+[RuoYi](https://gitee.com/y_project/RuoYi) 源码通俗易懂很容易上手。适合 **移动端+PC后台管理** 项目。
 
-其实有更好的方案，就是用 [jhipster](https://www.jhipster.tech/) 去生成一个 JPA 框架省去写 SQL 的烦恼，加上 JDL 可以很方便生成 CRUD。但是由于本人学艺不精😭，就先按下不表。
+[jhipster](https://www.jhipster.tech/) 去生成的 JPA 框架适合 **无PC后台管理** 项目。
+省去写 SQL 的烦恼，加上 JDL 可以很方便生成 CRUD。
 
 ## 在线体验
 > admin/admin123  
@@ -38,23 +39,6 @@
 ## 差异
 
 - 支持 Mybatis Plus
-```shell script
-<!-- pagehelper 分页插件 需要排除 mybatis 依赖-->
-<dependency>
-    <groupId>com.github.pagehelper</groupId>
-    <artifactId>pagehelper-spring-boot-starter</artifactId>
-    <exclusions>
-        <exclusion>
-            <artifactId>mybatis-spring</artifactId>
-            <groupId>org.mybatis</groupId>
-        </exclusion>
-        <exclusion>
-            <artifactId>mybatis</artifactId>
-            <groupId>org.mybatis</groupId>
-        </exclusion>
-    </exclusions>
-</dependency>
-```
 - 添加 JPA 支持，自动生成表
 
 
